@@ -142,7 +142,7 @@ A strong use-case here to avoid child component re-renders
                         componetnt={MaterialLink}
                         rel ="noopener"
                         target="_blank"
-                        href="#"
+                        href="https://github.com/Yambo92/MusicApp_React"
                     >
                         <ListItemIcon>
                             <svg

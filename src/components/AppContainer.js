@@ -4,6 +4,7 @@ import { GlobalContext } from './GlobalState'
 //components
 import SimpleAppBar from './header/SimpleAppBar'
 import SwipeMenu from './SwipeMenu'
+import CurrentSection from './CurrentSection'
 //mui Stuff
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles'
 import { pink } from '@material-ui/core/colors'
@@ -48,6 +49,14 @@ const darkTheme = {
             // this is to disable pull refresh on android
         }
     }, [])
+    
+    useEffect(() => {
+        if(themeSelectValue === "Dark") {
+            body.classList.add('dark')
+        } else {
+            body.classList.remove('dark')
+        }
+    }, [themeSelectValue])
 
     return (
         <MuiThemeProvider
@@ -55,6 +64,7 @@ const darkTheme = {
         >
             <Router>
                 <SimpleAppBar/>
+                <Route component={CurrentSection}/>
                 <SwipeMenu />
             </Router>
         </MuiThemeProvider>
