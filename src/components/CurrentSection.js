@@ -148,7 +148,7 @@ const CurrentSection = ({ history, location }) => {
                     <Route
                         path="/home"
                         render={props => {
-                            setTabValue(0);
+                            // setTabValue(0);
                             return <HomePage/>
                         }}
                     />
